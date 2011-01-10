@@ -22,7 +22,7 @@ exports.socketIO = function(server) {
     if (!listener) {
       listener = io.listen(server, options);
       listener.on('connection', function(client) {
-        connectionCallback(client, req, res);
+        connectionCallback(client);
       });
     }
     next();
